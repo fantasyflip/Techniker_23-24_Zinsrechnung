@@ -11,28 +11,23 @@ int main()
     printf("---------------------\n");
     printf("| Jahr |   Kapital  |\n");
     printf("---------------------\n");
-    printf("|   0  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   1  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   2  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   3  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   4  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   5  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   6  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   7  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   8  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|   9  |  %.2lf |\n", capital);
-    capital = capital + capital * interest;
-    printf("|  10  |  %.2lf |\n", capital);
+
+    for(int i = 0; i<11;i++){
+        if(i > 9){
+            printf("|  %d  |  %.2lf |\n",i, capital);
+        }
+        else {
+            printf("|   %d  |  %.2lf |\n",i, capital);
+        }
+
+        capital = capital + capital * interest;
+    }
+
     printf("---------------------\n");
+
+
+
+
 
     printf("\n\n\n");
     return 0;
